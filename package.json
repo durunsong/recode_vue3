@@ -1,0 +1,47 @@
+{
+  "name": "recode_vue3",
+  "private": true,
+  "version": "1.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "test": "vite --mode test",
+    "prod": "vite --mode production",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "build:test": "vite build --mode test ",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@types/node": "^20.14.2",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "axios": "^1.7.2",
+    "element-plus": "^2.7.4",
+    "fingerprintjs2": "^2.1.4",
+    "husky": "^9.0.11",
+    "mockjs": "^1.1.0",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "sass": "^1.77.4",
+    "terser": "^5.31.1",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-require-transform": "^1.0.21",
+    "vue": "^3.4.21",
+    "vue-clipboard3": "^2.0.0",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.3.2",
+    "vue3-lazyload": "^0.3.8"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
