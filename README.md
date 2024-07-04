@@ -38,8 +38,25 @@ yarn build:prod
 npm run preview
 # 或者
 yarn preview
+```
+
+###  部署配置  eg：vercel部署 (project.json)
+##### 命令  
+vercel --cwd ./recode_vue3/
+
+``` json
+{
+  "projectId": "prj_rQGnnAhMevC2sjiwCCppvCu48nny",
+  "orgId": "team_j4xDsAAIpUmffVZAX8ry8btS",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
+}
+
+```
 
 ###  技术栈
+``` 
 Vue3
 Vite5
 Pinia
@@ -49,4 +66,5 @@ Axios
 Vue-Router
 Vue-I18n
 Vue-Clipboard3
+```
 
