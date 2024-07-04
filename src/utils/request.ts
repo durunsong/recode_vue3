@@ -10,7 +10,7 @@ let request = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API, //基础路径上会携带/api
   timeout: 5000,
 });
-console.log("title++++++++",import.meta.env) // NODE_ENV
+// console.log("title++++++++",import.meta.env) // NODE_ENV
 // 2. request 实例添加请求与响应拦截器
 request.interceptors.request.use((config: any) => {
   //  config配置对象,headers 属性请求头,经常给服务器携带公共参数

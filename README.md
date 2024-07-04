@@ -1,15 +1,13 @@
-# Hagobuy推广项目
+# recode_vue3项目
 
 ## 简介
-Hagobuy推广项目是一个使用Vue3和Pinia构建的应用程序，用于管理Hagobuy网站的推广活动。该项目使用了Element Plus组件库，以及其他一些常用的Vue生态工具和库。
+recode_vue3项目是一个使用Vue3和vite构建的应用程序，用于recode_vue3管理后台。该项目使用了Element Plus组件库，以及其他一些常用的Vue生态工具和库。
 
 ## 安装
 确保你已经安装了Node.js和npm（或者使用yarn/pnpm）。然后运行以下命令安装项目的依赖项：
 
-
 ## 环境准备
 Node 18+ 
-
 
 ### 使用[阿里云NPM镜像](https://www.npmmirror.com/)
 ``` 
@@ -18,8 +16,8 @@ npm config set registry https://registry.npmmirror.com
 
 ```bash
 ### 获取项目代码
-git clone https://codeup.aliyun.com/hagobuy/web/hagobuy_tuiguang.git
-cd hagobuy_tuiguang
+git clone https://github.com/durunsong/recode_vue3.git
+cd recode_vue3
 
 ## 安装依赖 
 npm install

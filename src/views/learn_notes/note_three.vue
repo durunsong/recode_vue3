@@ -11,13 +11,7 @@
     <h2>useAttrs</h2>
     <el-button type="primary" size="small" :icon="Edit" />
     <!-- 自定义组件 -->
-    <DrButton
-      type="primary"
-      size="small"
-      :icon="Edit"
-      title="按钮提示"
-      @click="() => alert('click')"
-    ></DrButton>
+    <DrButton type="primary" size="small" :icon="Edit" title="按钮提示" @click="() => alert('click')"></DrButton>
   </div>
 </template>
 

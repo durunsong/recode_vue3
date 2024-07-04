@@ -1,29 +1,12 @@
 <template>
   <el-header class="top">
-    <component
-      v-if="isCollapse == true"
-      :is="Expand"
-      @click="handleClick"
-      class="expandFold"
-    >
-    </component>
-    <component v-else :is="Fold" @click="handleClick" class="expandFold">
-    </component>
+    <component v-if="isCollapse == true" :is="Expand" @click="handleClick" class="expandFold"></component>
+    <component v-else :is="Fold" @click="handleClick" class="expandFold"></component>
     <div class="avatar_dropdown">
-      <el-avatar
-        v-if="userInfo && userInfo !== null"
-        class="avatar_img"
-        :size="50"
-        :src="emptyImage"
-        @error="errorHandler"
-      >
-        <img :src="userInfo.userInfo.avatar" />
-      </el-avatar>
+      <el-avatar :size="50" class="avatar_img" :src="imageList" @error="errorHandler"></el-avatar>
       <el-dropdown @command="quitOut">
         <span class="el-dropdown-link">
-          <span v-if="userInfo && userInfo !== null"
-            >你好: {{ userInfo.userInfo.loginName }}</span
-          >
+          <span v-if="userInfo && userInfo !== null">你好: {{ userInfo?.userInfo?.loginName }}</span>
           <el-icon class="el-icon--right">
             <arrow-down />
           </el-icon>
@@ -43,33 +26,19 @@
 import { ElMessage } from "element-plus";
 import { ArrowDown, Expand, Fold } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
-import { computed, watch, ref } from "vue";
-// 导入 pinia 中的 storeToRefs 方法
-// import { storeToRefs } from "pinia";
-// 导入 pinia 实例
+import { computed, ref } from "vue";
 import { userPomotionStore } from "@/store";
+const emptyImage = ref(require('@/assets/images/pkqiou.png'));
 
-const emptyImage = ref("");
-// 实例化容器
+const errorHandler = (event:any) => {
+  event.target.src = emptyImage.value;
+};
 const router = useRouter();
 const store = userPomotionStore();
-const userInfo = computed(() => {
-  return store.userInfo;
-  console.log("00000++++",store.userInfo);
-  
-});
-// 让数据具有响应式
-// const { isCollapse } = storeToRefs(store.$state.isCollapse);
-const isCollapse = computed(() => {
-  return store.isCollapse;
-});
-// watch(isCollapse<any>, (newValue, oldValue) => {
-//   isCollapse = newValue;
-// });
-const errorHandler = () => {
-  emptyImage.value = "../assets/images/dog.jpg";
-};
-// 调用store方法
+const userInfo = computed(() => store.userInfo);
+const imageList = computed(() => userInfo.value?.userInfo?.avatar);
+
+const isCollapse = computed(() => store.isCollapse);
 const handleClick = () => {
   store.statusChange();
 };
@@ -104,21 +73,26 @@ const quitOut = (str: any) => {
   height: 100px;
   width: 100%;
   background-color: #d2cbcb;
+
   .expandFold {
     width: 30px;
     height: 30px;
     cursor: pointer;
   }
+
   .avatar_dropdown {
     display: flex;
+
     .avatar_img {
       margin-top: -10px;
       margin-right: 10px;
     }
   }
 }
+
 .el-dropdown-link {
   outline: none;
+
   &:hover {
     outline: none;
   }

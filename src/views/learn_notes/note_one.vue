@@ -1,39 +1,23 @@
 <template>
   <div>
-    <el-upload
-      action="#"
-      :headers="headers"
-      :list-type="listType"
-      :http-request="uploadAction"
-      :on-exceed="handleExceed"
-      :on-remove="handleRemove"
-      :before-upload="beforeUpload"
-      :on-success="uploadSuccess"
-      :on-error="uploadError"
-      :on-progress="uploadProgress"
-      :file-list="fileListCopy.data"
-      ref="upload"
-      :multiple="true"
-      :limit="limit"
-      :disabled="disabled"
-      :data="paramData"
-    >
-      <el-icon><Plus /></el-icon>
+    <el-upload action="#" :headers="headers" :list-type="listType" :http-request="uploadAction"
+      :on-exceed="handleExceed" :on-remove="handleRemove" :before-upload="beforeUpload" :on-success="uploadSuccess"
+      :on-error="uploadError" :on-progress="uploadProgress" :file-list="fileListCopy.data" ref="upload" :multiple="true"
+      :limit="limit" :disabled="disabled" :data="paramData">
+      <el-icon>
+        <Plus />
+      </el-icon>
       <template #file="{ file }">
         <div>
           <img :src="file.url" alt="" />
           <span class="el-upload-list__item-actions">
-            <span
-              class="el-upload-list__item-preview"
-              @click="handlePictureCardPreview(file)"
-            >
+            <span class="el-upload-list__item-preview" @click="handlePictureCardPreview(file)">
               <el-icon><zoom-in /></el-icon>
             </span>
-            <span
-              class="el-upload-list__item-delete"
-              @click="handleRemove(file)"
-            >
-              <el-icon><Delete /></el-icon>
+            <span class="el-upload-list__item-delete" @click="handleRemove(file)">
+              <el-icon>
+                <Delete />
+              </el-icon>
             </span>
           </span>
         </div>

@@ -8,16 +8,16 @@ export const routes = [
   {
     path: "/login",
     meta: {
-      title: "登录页",
+      title: "登录",
     },
     component: () => import("@/views/login/index.vue"),
   },
   {
     path: "/home",
     name: "home",
-    label: "首页",
+    label: "主页",
     meta: {
-      name: "首页",
+      name: "主页",
       title: "主页",
     },
     component: () => import("@/views/Home.vue"),
@@ -41,7 +41,7 @@ export const routes = [
               title: "个人设置",
             },
             component: () => import("@/views/userCenter/userList.vue"),
-          },
+          }
         ],
       },
       {
@@ -66,6 +66,27 @@ export const routes = [
           },
         ],
       },
+      {
+        label: "vantV总结",
+        path: "vantV",
+        name: "vantV",
+        meta: {
+          name: "vantV总结",
+          title: "vantV总结",
+        },
+        component: () => import("@/views/g6/index.vue"),
+        children: [
+          {
+            path: "g6_1",
+            name: "g6_1",
+            label: "g6_1",
+            meta: {
+              name: "@g6_1",
+              title: "@g6_1",
+            },
+            component: () => import("@/views/g6/g6_1.vue"),
+          }]
+        },
       {
         label: "总结笔记",
         path: "notes",

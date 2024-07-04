@@ -32,22 +32,27 @@ const goHome = () => {
   font-size: 24px;
   align-items: center;
   color: red;
+
   .not_found {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+
     .img {
       width: 700px;
       height: 580px;
     }
   }
+
   .btn_back {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .btn_back_in {
       display: flex;
       align-items: center;
+
       .btn {
         width: 120px;
         background-color: #64fcd9;
@@ -60,41 +65,47 @@ const goHome = () => {
     }
   }
 }
+
 @media screen and (max-width: 991px) {
   .wrong {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  font-size: 24px;
-  align-items: center;
-  color: red;
-  .not_found {
     display: flex;
+    flex-flow: column;
     justify-content: center;
-    margin-top: 120px;
-    .img {
-      width: 350px;
-      height: 290px;
-    }
-  }
-  .btn_back {
-    display: flex;
+    font-size: 24px;
     align-items: center;
-    justify-content: center;
-    .btn_back_in {
+    color: red;
+
+    .not_found {
+      display: flex;
+      justify-content: center;
+      margin-top: 120px;
+
+      .img {
+        width: 350px;
+        height: 290px;
+      }
+    }
+
+    .btn_back {
       display: flex;
       align-items: center;
-      .btn {
-        width: 120px;
-        background-color: #64fcd9;
-        height: 40px;
-        margin-top: 20px;
-        border-radius: 10px;
-        color: #f15b41;
-        font-size: 18px;
+      justify-content: center;
+
+      .btn_back_in {
+        display: flex;
+        align-items: center;
+
+        .btn {
+          width: 120px;
+          background-color: #64fcd9;
+          height: 40px;
+          margin-top: 20px;
+          border-radius: 10px;
+          color: #f15b41;
+          font-size: 18px;
+        }
       }
     }
   }
-}
 }
 </style>

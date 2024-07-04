@@ -4,6 +4,8 @@ export interface MetaInfo {
     description: string;
   }
   export interface UserPromotionState {
+    userInfo: Record<string, any>;
+    isCollapse: boolean;
     affcode: string;
     tuiguangURL: string;
     hagobuy: string;
@@ -23,4 +25,3 @@ export interface MetaInfo {
     text?: string;
     background?: string;
   }
-  

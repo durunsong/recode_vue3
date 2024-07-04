@@ -6,10 +6,10 @@
 <script setup lang="ts">
 </script>
 <style lang="scss">
-:deep(#app) {
-  overflow-y: scroll;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
+// :deep(#app) {
+//   overflow-y: scroll;
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+// }
 </style>

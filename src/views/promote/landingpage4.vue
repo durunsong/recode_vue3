@@ -33,7 +33,7 @@ export default {
       }, 500);
     }
 
-    console.log("74444444444445+++++++++", instance.value,document.referrer);
+    console.log("74444444444445+++++++++", instance.value, document.referrer);
   },
   methods: {
     // 创建浏览器指纹
